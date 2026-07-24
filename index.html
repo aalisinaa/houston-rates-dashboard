@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Houston Credit Union Rates · PrimeWay Benchmark</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f5f7; --surface:#ffffff; --ink:#1d1d1f; --gray:#6e6e73; --faint:#86868b;
+  --line:#e6e6eb; --hair:#f0f0f3; --blue:#0071e3; --blue2:#41a6ff; --indigo:#5e5ce6;
+  --good:#1a9e4b; --good2:#34c759; --mid:#b06d00; --bad:#d6342a;
+  --shadow:0 4px 24px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+  --shadow-h:0 12px 36px rgba(0,0,0,.10),0 2px 6px rgba(0,0,0,.05);
+}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;color:var(--ink);background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",sans-serif;
+  font-size:16px;line-height:1.5;
+  background-image:radial-gradient(900px 380px at 50% -120px,#dbe9ff 0%,rgba(219,233,255,0) 70%);
+  background-repeat:no-repeat}
+.wrap{max-width:1000px;margin:0 auto;padding:64px 22px 110px}
+.badge-live{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.7);
+  backdrop-filter:saturate(180%) blur(12px);border:1px solid var(--line);border-radius:980px;
+  padding:6px 14px;font-size:13px;font-weight:500;color:var(--gray);box-shadow:var(--shadow)}
+.badge-live .pulse{width:7px;height:7px;border-radius:50%;background:var(--good2);
+  box-shadow:0 0 0 0 rgba(52,199,89,.5);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,199,89,.5)}70%{box-shadow:0 0 0 7px rgba(52,199,89,0)}100%{box-shadow:0 0 0 0 rgba(52,199,89,0)}}
+header.hero{text-align:center;margin-bottom:56px}
+header.hero h1{font-size:clamp(38px,6vw,60px);font-weight:800;letter-spacing:-.035em;
+  margin:22px 0 12px;background:linear-gradient(180deg,#1d1d1f,#52525a);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.04}
+header.hero p{font-size:clamp(17px,2.4vw,21px);color:var(--gray);margin:0;font-weight:400;letter-spacing:-.01em}
+header.hero p b{color:var(--ink);font-weight:600}
+header.hero .hero-meta{font-size:13.5px;color:var(--faint);margin-top:12px;font-weight:500}
+.leads{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px}
+.lead{background:var(--surface);border-radius:20px;padding:20px 22px;box-shadow:var(--shadow);
+  transition:transform .25s ease,box-shadow .25s ease}
+.lead:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.lead.iswin{box-shadow:0 0 0 2px var(--blue),var(--shadow)}
+.lead-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}
+.lead-cat{font-size:18px;color:var(--ink);font-weight:700;letter-spacing:-.015em}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:980px;white-space:nowrap}
+.tag.dep{background:rgba(52,199,89,.14);color:var(--good)}
+.tag.loan{background:rgba(0,113,227,.12);color:var(--blue)}
+.lead-rate{font-size:25px;font-weight:700;letter-spacing:-.02em;line-height:1;
+  background:linear-gradient(135deg,var(--good),var(--good2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lead-rate i{font-style:normal;font-size:14px;font-weight:600;color:var(--faint);-webkit-text-fill-color:var(--faint);margin-left:1px}
+.lead-who{margin-top:13px;font-size:14px;line-height:1.45}
+.lead-who b{font-weight:700;font-size:16px;letter-spacing:-.01em}
+.lead-who .nm{display:block;color:var(--gray);font-size:13.5px;margin-top:2px}
+.lead-me{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);font-size:13px;font-weight:500}
+.lead-me.good{color:var(--good)}.lead-me.mid{color:var(--mid)}.lead-me.bad{color:var(--bad)}.lead-me.none{color:var(--faint)}
+h2{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+  margin:62px 0 22px;text-align:center}
+.glance{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gcard{background:var(--surface);border-radius:22px;padding:24px 26px;box-shadow:var(--shadow)}
+.ghead{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;margin-bottom:14px}
+.ghead .dot{width:9px;height:9px;border-radius:50%}
+.gcard.win .dot{background:var(--good2)}.gcard.win .ghead{color:var(--good)}
+.gcard.gap .dot{background:var(--bad)}.gcard.gap .ghead{color:var(--bad)}
+.gcard ul{margin:0;padding:0;list-style:none}
+.gcard li{font-size:15px;padding:9px 0;border-top:1px solid var(--hair);color:var(--gray)}
+.gcard li:first-child{border-top:none}.gcard li b{color:var(--ink);font-weight:600;margin-right:8px}
+.scores{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px}
+.score{background:var(--surface);border-radius:20px;padding:18px 20px;box-shadow:var(--shadow);
+  transition:transform .25s ease,box-shadow .25s ease}
+.score:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.score-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.score-cat{font-size:13.5px;color:var(--gray);font-weight:500}
+.score-badge{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:50px;height:50px;border-radius:14px;font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.score-badge span{font-size:9px;font-weight:600;opacity:.7;margin-top:2px}
+.score-badge.good{background:rgba(52,199,89,.14);color:var(--good)}
+.score-badge.mid{background:rgba(255,159,10,.15);color:var(--mid)}
+.score-badge.bad{background:rgba(214,52,42,.12);color:var(--bad)}
+.score-badge.none{background:#f0f0f3;color:var(--faint);font-size:18px}
+.score-rate{font-size:13px;color:var(--faint);margin-top:14px}
+.search{margin:6px 0}
+.search input{width:100%;padding:14px 20px;background:var(--surface);border:1px solid var(--line);
+  border-radius:980px;color:var(--ink);font-size:15px;outline:none;box-shadow:var(--shadow);
+  transition:box-shadow .2s,border-color .2s}
+.search input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,113,227,.12)}
+.cat{background:var(--surface);border-radius:22px;padding:6px 26px 16px;margin:16px 0;box-shadow:var(--shadow)}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;padding:18px 2px 8px}
+.cat-head h3{font-size:21px;font-weight:700;letter-spacing:-.02em;margin:0}
+.cat-head .sub{font-size:12px;color:var(--faint);font-weight:500;letter-spacing:.01em}
+table{width:100%;border-collapse:collapse}
+td{padding:12px 6px;font-size:15px;border-top:1px solid var(--hair);vertical-align:middle}
+tr:first-child td{border-top:none}
+td.rk{width:30px;color:var(--faint);font-size:13px;font-variant-numeric:tabular-nums}
+td.cu{width:130px;font-weight:600;letter-spacing:-.01em}
+td.rate{width:78px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+td.rate span{color:var(--faint);font-weight:500;font-size:12px}
+td.bar{width:120px}td.bar i{display:block;height:7px;border-radius:980px;
+  background:linear-gradient(90deg,var(--blue),var(--blue2));opacity:.32;min-width:3px}
+td.pn{color:#48484a;font-size:14.5px}
+td.tm{width:116px;color:var(--faint);font-size:12.5px;text-align:right}
+tbody tr{transition:background .15s}tbody tr:hover td{background:#fafafd}
+tr.me td{background:linear-gradient(90deg,rgba(0,113,227,.09),rgba(0,113,227,.04))}
+tr.me:hover td{background:linear-gradient(90deg,rgba(0,113,227,.13),rgba(0,113,227,.06))}
+tr.me td.cu{color:var(--blue)}tr.me td.bar i{opacity:1}
+tr.me td:first-child{border-radius:11px 0 0 11px}tr.me td:last-child{border-radius:0 11px 11px 0}
+.flag{color:var(--faint);cursor:help;font-size:13px}
+.stale{display:none;background:#fff3f2;border:1px solid #f3c0bb;color:#b3261e;
+  border-radius:14px;padding:13px 18px;margin:0 0 24px;font-size:14px;font-weight:600;text-align:center}
+header.hero .freshness{font-size:12.5px;color:var(--faint);margin-top:6px;font-weight:500}
+footer{margin-top:70px;text-align:center;color:var(--faint);font-size:12px;line-height:1.8}
+@media(max-width:720px){
+  .leads{grid-template-columns:1fr 1fr}.scores{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  td.bar,td.tm{display:none}td.cu{width:auto}.wrap{padding:44px 15px 70px}
+  .cat{padding:4px 16px 12px}.cat-head h3{font-size:19px}}
+@media(max-width:520px){
+  .leads{grid-template-columns:1fr}.scores{grid-template-columns:1fr 1fr}
+  header.hero h1{font-size:32px}.lead-rate{font-size:23px}
+  .cat-head .sub{display:none}td.cu{font-size:14px}td.pn{font-size:13.5px}}
+</style></head><body><div class="wrap">
+<div id="stale" class="stale"></div>
+<header class="hero">
+  <span class="badge-live"><span class="pulse"></span>Updated July 24, 2026 (CT)</span>
+  <h1>Houston Credit&nbsp;Union Rates</h1>
+  <p>Daily competitive rate intelligence · benchmarking <b>PrimeWay</b></p>
+  <div class="hero-meta">0 credit unions · 0 products tracked</div>
+  <div class="freshness" id="freshness"></div>
+</header>
+<h2>Best deposit rates in town</h2><div class="leads"></div><h2>Lowest loan rates in town</h2><div class="leads"></div>
+<h2>PrimeWay scorecard</h2>
+<div class="scores"></div>
+<div class="search"><input id="q" placeholder="Search a credit union or product…" onkeyup="flt()"></div>
+<h2>Deposit rates</h2>
+<h2>Loan rates</h2>
+<footer>Auto-updated daily from public credit-union rate pages · rates are indicative, always confirm with the institution<br>&#9432; indicates a product with qualifying conditions · longer bar = more competitive</footer>
+</div>
+<script>
+var BUILD="2026-07-24T07:48:51";
+(function(){
+  var b=new Date(BUILD), now=new Date();
+  var days=Math.floor((now-b)/86400000);
+  var fr=document.getElementById('freshness');
+  var ago=days<=0?"earlier today":(days===1?"yesterday":days+" days ago");
+  if(fr) fr.textContent="Last refreshed "+ago;
+  if(days>=2){
+    var el=document.getElementById('stale');
+    el.style.display='block';
+    el.textContent="⚠ This dashboard last updated "+days+" days ago — the daily refresh may have failed, so rates shown may be out of date.";
+  }
+})();
+function flt(){var q=document.getElementById('q').value.toLowerCase();
+document.querySelectorAll('.cat').forEach(function(sec){var any=false;
+sec.querySelectorAll('tbody tr').forEach(function(r){
+var m=r.textContent.toLowerCase().includes(q);r.style.display=m?'':'none';if(m)any=true;});
+sec.style.display=any?'':'none';});}
+</script></body></html>
